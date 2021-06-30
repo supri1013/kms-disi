@@ -99,44 +99,12 @@
                 </div>
 
                 <div class="media-body text-right">
-                    <h3 class="no-margin">{{App\Newisu::all()->count()}}</h3>
+                    <h3 class="no-margin">{{App\Dokumenfile::all()->count()}}</h3>
                     <span class="text-uppercase text-size-mini">Total Dokumen</span>
                 </div>
             </div>
         </div>
     </div>
-
-    {{-- <div class="col-sm-6 col-md-3">
-        <div class="panel panel-body bg-slate-400 has-bg-image">
-            <div class="media no-margin">
-                <div class="media-left media-middle">
-                    <i class="icon-enter6 icon-3x opacity-75"></i>
-                </div>
-
-                <div class="media-body text-right">
-                    <h3 class="no-margin">{{App\Newisu::all()->count()}}</h3>
-                    <span class="text-uppercase text-size-mini">Total Kategori Permasalahan</span>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- <div class="col-sm-6 col-md-3">
-        <div class="panel panel-body bg-pink-400 has-bg-image">
-            <div class="media no-margin">
-                <div class="media-left media-middle">
-                    <i class="icon-enter6 icon-3x opacity-75"></i>
-                </div>
-
-                <div class="media-body text-right">
-                    <h3 class="no-margin">{{App\Newisu::all()->count()}}</h3>
-                    <span class="text-uppercase text-size-mini">Total Kluster</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div> --}}
     
 
 @endsection
