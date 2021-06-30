@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDokumenfile extends Migration
+class TabelDokumens extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateDokumenfile extends Migration
      */
     public function up()
     {
-        Schema::create('dokumenfile', function (Blueprint $table) {
-            $table->integer('id');
+        Schema::create('dokumens', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('kategori_id');
             $table->text('judul_umum');
             $table->date('tahun');
             $table->string('volume');
@@ -53,6 +55,6 @@ class CreateDokumenfile extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dokumenfile');
+        Schema::dropIfExists('dokumens');
     }
 }

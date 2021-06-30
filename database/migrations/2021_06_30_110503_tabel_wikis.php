@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class WikiNewTable extends Migration
+class TabelWikis extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class WikiNewTable extends Migration
      */
     public function up()
     {
-        Schema::create('newwiki', function (Blueprint $table) {
+        Schema::create('wikis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('judul');
+            $table->string('deskripsi');
             $table->text('isi_artikel');
-            $table->string('gambar')->nullable();
-            $table->text('link')->nullable();
+            $table->string('gambar');
+            $table->text('editor');
             $table->text('sumber');
             $table->integer('user_id');
-            $table->integer('kategori_id')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class WikiNewTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newwiki');
+        Schema::dropIfExists('wikis');
     }
 }

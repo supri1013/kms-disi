@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 class Newwiki extends Model
 {
-    protected $table = 'newwiki';
+    protected $table = 'wikis';
     protected $fillable = ['judul','deskripsi','isi_artikel','gambar','editor','sumber','user_id'];
 
     public function user()

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 class Dokumenfile extends Model
 {
-    protected $table = 'dokumenfile';
+    protected $table = 'dokumens';
     protected $guarded = ['id'];
     
     public function user()

@@ -2,6 +2,9 @@
 @section('tittle',"Data Isu")
 @section('conten')
 
+
+
+
 <div class="panel panel-flat">
     <div class="panel-heading">
         <h5 class="panel-title">DATA ISU</h5>
@@ -15,7 +18,7 @@
         {{session('sukses')}}
     </div> 
     @endif
-    <table class="table datatable-basic">
+    <table class="table datatable-button-html5-basic">
         <thead>
             <tr>
                 <th>Pic Piket</th>
@@ -48,11 +51,17 @@
         </tbody>    
     </table>
 </div>
+
 @push('detail')
 <!-- Theme JS files -->
-  <script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/js/pages/datatables_basic.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/extensions/buttons.min.js')}}"></script>
+
+<script type="text/javascript" src="{{asset('assets/js/pages/datatables_extension_buttons_html5.js')}}"></script>
   <!-- /theme JS files -->
 @endpush
 
